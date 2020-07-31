@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent"
 const useStyles = makeStyles(theme => ({
   root: {
     minWidth: "300px",
+    maxWidth: "500px",
   },
   header: {
     text: "50px",
@@ -22,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const PersonCard = ({ PersonName, gender, age, eye, hair, films, species }) => {
+const PersonCard = ({ PersonName, gender, age, eye, hair }) => {
   const classes = useStyles()
 
   return (
@@ -34,9 +35,6 @@ const PersonCard = ({ PersonName, gender, age, eye, hair, films, species }) => {
         <Typography>Gender: {gender}</Typography>
         <Typography>Eye Color: {eye}</Typography>
         <Typography>Hair Color: {hair}</Typography>
-        <a href={films}>Films</a>
-        <br></br>
-        <a href={species}>Species</a>
       </CardContent>
     </Card>
   )

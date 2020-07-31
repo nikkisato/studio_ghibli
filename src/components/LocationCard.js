@@ -22,14 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const PlaceCard = ({
-  name,
-  climate,
-  terrain,
-  surfaceWater,
-  residents,
-  films,
-}) => {
+const PlaceCard = ({ name, climate, terrain, surfaceWater }) => {
   const classes = useStyles()
 
   return (
@@ -40,9 +33,6 @@ const PlaceCard = ({
         <Typography> Climate: {climate}</Typography>
         <Typography> Terrain: {terrain}</Typography>
         <Typography> Surface Water: {surfaceWater}</Typography>
-        <a href={residents}>Residents</a>
-        <br></br>
-        <a href={films}>Films</a>
       </CardContent>
     </Card>
   )

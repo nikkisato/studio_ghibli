@@ -10,9 +10,11 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     marginTop: "10px",
   },
+
   headerDisplay: {
     display: "flex",
     flexDirection: "Row",
+    minWidth: "300px",
     backgroundColor: "#eec0c6",
     backgroundImage: "linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%)",
   },
@@ -34,7 +36,7 @@ const Header = () => {
 
   return (
     <header>
-      <div>
+      <div className={classes.headerDisplay}>
         <Typography variant="h4" className={classes.title}>
           <Link className={classes.Links} to="/">
             Studio Ghibli

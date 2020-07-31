@@ -40,18 +40,11 @@ const PeoplePage = ({
   const classes = useStyles()
   return (
     <Layout>
-      <CardHeader
-        className={classes.SectionTitle}
-        item
-        xs={12}
-        md={6}
-        lg={4}
-        title="People"
-      />
+      <CardHeader className={classes.SectionTitle} item title="People" />
       <br></br>
-      <Grid container spacing={1}>
+      <Grid container spacing={4} className={classes.centerGrid}>
         {Person.map(({ node }) => (
-          <Grid container item xs={12} md={6} lg={4}>
+          <Grid item xs={12} sm={3}>
             <Paper className={classes.paper} key={node.id}>
               <Card
                 gender={node.gender}
