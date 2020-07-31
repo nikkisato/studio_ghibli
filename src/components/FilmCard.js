@@ -22,14 +22,13 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const GhibliCard = ({ title, description, releaseDate, PersonName }) => {
+const GhibliCard = ({ title, description, releaseDate }) => {
   const classes = useStyles()
 
   return (
     <Card className={classes.root}>
       <CardHeader
         title={title}
-        PersonName={PersonName}
         subheader={releaseDate}
         className={classes.header}
       />

@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import Card from "../components/Card"
+import Card from "../components/FilmCard"
 import { graphql } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"

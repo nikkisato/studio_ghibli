@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import Card from "../components/Card"
+import Card from "../components/PeopleCard"
 import { graphql } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
@@ -54,10 +54,13 @@ const PeoplePage = ({
           <Grid container item xs={12} md={6} lg={4}>
             <Paper className={classes.paper} key={node.id}>
               <Card
-                title={node.title}
-                description={node.description}
-                releaseDate={node.release_date}
+                gender={node.gender}
                 PersonName={node.name}
+                age={node.age}
+                eye={node.eye_color}
+                hair={node.hair_color}
+                films={node.films}
+                species={node.species}
               />
             </Paper>
           </Grid>
