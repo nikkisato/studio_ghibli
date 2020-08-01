@@ -8,6 +8,7 @@ import CardContent from "@material-ui/core/CardContent"
 const useStyles = makeStyles(theme => ({
   root: {
     minWidth: "300px",
+    maxWidth: "500px",
   },
   header: {
     text: "50px",
@@ -22,23 +23,21 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-const GhibliCard = ({ title, description, releaseDate, PersonName }) => {
+const PersonCard = ({ PersonName, gender, age, eye, hair }) => {
   const classes = useStyles()
 
   return (
     <Card className={classes.root}>
-      <CardHeader
-        title={title}
-        PersonName={PersonName}
-        subheader={releaseDate}
-        className={classes.header}
-      />
+      <CardHeader title={PersonName} className={classes.header} />
 
       <CardContent>
-        <Typography>{description}</Typography>
+        <Typography>Age: {age}</Typography>
+        <Typography>Gender: {gender}</Typography>
+        <Typography>Eye Color: {eye}</Typography>
+        <Typography>Hair Color: {hair}</Typography>
       </CardContent>
     </Card>
   )
 }
 
-export default GhibliCard
+export default PersonCard

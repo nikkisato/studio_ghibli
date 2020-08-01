@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import Card from "../components/Card"
+import Card from "../components/FilmCard"
 import { graphql } from "gatsby"
 import { makeStyles } from "@material-ui/core/styles"
 import Paper from "@material-ui/core/Paper"
@@ -44,15 +44,16 @@ const IndexPage = ({
         className={classes.SectionTitle}
         item
         xs={12}
+        sm={8}
         md={6}
-        lg={4}
-        title="Film"
+        lg={3}
+        title="Films"
       />
       <br></br>
-      <Grid container spacing={1}>
+      <Grid container spacing={4}>
         {Film.map(({ node }) => (
-          <Grid container item xs={12} md={6} lg={4}>
-            <Paper className={classes.paper} key={node.id}>
+          <Grid item xs={12} sm={8} md={6} lg={3} key={node.id}>
+            <Paper className={classes.paper}>
               <Card
                 title={node.title}
                 description={node.description}
