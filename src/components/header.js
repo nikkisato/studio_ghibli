@@ -1,19 +1,22 @@
 import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import React from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Typography from "@material-ui/core/Typography"
+import Button from "@material-ui/core/Button"
+import { node } from "prop-types"
 
 const useStyles = makeStyles(theme => ({
   title: {
     display: "flex",
     justifyContent: "center",
     marginTop: "10px",
+    color: " black",
+    textDecoration: `none`,
   },
 
   headerDisplay: {
     display: "flex",
-    flexDirection: "Row",
+    flexDirection: "column",
     minWidth: "300px",
     backgroundColor: "#eec0c6",
     backgroundImage: "linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%)",
@@ -23,11 +26,20 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "Row",
     listStyleType: `none`,
     margin: "20px",
-    justifyContent: "flex-end",
+    justifyContent: "center",
   },
   Links: {
     margin: "5px",
     textDecoration: `none`,
+    color: "White",
+  },
+  Button: {
+    leftMargin: "15px",
+    rightMargin: "15px;",
+
+    hover: {
+      color: "white",
+    },
   },
 }))
 
@@ -37,37 +49,46 @@ const Header = () => {
   return (
     <header>
       <div className={classes.headerDisplay}>
-        <Typography variant="h4" className={classes.title}>
-          <Link className={classes.Links} to="/">
+        <Typography variant="h4">
+          <Link to="/" className={classes.title}>
             Studio Ghibli
           </Link>
         </Typography>
         <ul className={classes.LinkList}>
-          <li>
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.Button}
+          >
             <Link className={classes.Links} to="/">
               Films
             </Link>
-          </li>
-          <li>
+          </Button>
+          <Button variant="contained" color="primary" className={classes.Button}>
             <Link className={classes.Links} to="/people">
               People
             </Link>
-          </li>
-          <li>
+          </Button>
+
+          <Button
+            variant="contained"
+            color="primary"
+            className={classes.Button}
+          >
             <Link className={classes.Links} to="/location">
               Locations
             </Link>
-          </li>
-          <li>
+          </Button>
+          <Button variant="contained" color="primary" className="Button">
             <Link className={classes.Links} to="/species">
               Species
             </Link>
-          </li>
-          <li>
+          </Button>
+          <Button variant="contained" color="primary" className="Button">
             <Link className={classes.Links} to="/vehicle">
               Vehicle
             </Link>
-          </li>
+          </Button>
         </ul>
       </div>
     </header>

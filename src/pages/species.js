@@ -40,7 +40,7 @@ const SpeciesPage = ({
   const classes = useStyles()
   return (
     <Layout>
-      <CardHeader className={classes.SectionTitle} item title="People" />
+      <CardHeader className={classes.SectionTitle} item title="Species" />
       <br></br>
       <Grid container spacing={4} className={classes.centerGrid}>
         {Species.map(({ node }) => (

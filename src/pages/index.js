@@ -44,9 +44,10 @@ const IndexPage = ({
         className={classes.SectionTitle}
         item
         xs={12}
+        sm={8}
         md={6}
-        lg={4}
-        title="Film"
+        lg={3}
+        title="Films"
       />
       <br></br>
       <Grid container spacing={4}>

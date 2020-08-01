@@ -46,7 +46,7 @@ const Location = ({
         xs={12}
         md={6}
         lg={4}
-        title="Location"
+        title="Locations"
       />
       <br></br>
       <Grid container spacing={4}>
