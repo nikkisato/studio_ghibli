@@ -44,8 +44,8 @@ const SpeciesPage = ({
       <br></br>
       <Grid container spacing={4} className={classes.centerGrid}>
         {Species.map(({ node }) => (
-          <Grid item xs={12} sm={3}>
-            <Paper className={classes.paper} key={node.id}>
+          <Grid item xs={12} sm={8} md={6} lg={3} key={node.id}>
+          <Paper className={classes.paper}>
               <Card
                 name={node.name}
                 classification={node.classification}
